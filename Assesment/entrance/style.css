@@ -339,3 +339,8 @@
                 grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjusted size for smaller screens */
             }
         }
+
+.point-photo video.cropped-bottom {
+    height: calc(100% / 0.85);
+    object-position: top;
+}
