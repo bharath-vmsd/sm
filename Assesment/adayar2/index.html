@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Visit Report</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Adayar 2 Store Visit Report</h1>
+            <p>Store visited by Bharath</p>
+            <div class="date">Visit Date: <span id="reportDate">28th October 2025</span></div>
+        </div>
+
+
+
+        <!-- Summary Section -->
+        <div class="section">
+            <h2 class="section-title">Report Summary</h2>
+            <div class="summary-content">
+                <p><strong>Visit Overview:</strong> The store visit was conducted to get the glimpse of the brand and the current VM practices.</p>
+                <p><strong>Key Observations:</strong> The store has a big and elevated facade which is good for visibility but the entrance is small which doesn't give a grandeur feeling.</p>
+                <p><strong>Overall Assessment:</strong> The visit revealed both strengths and areas requiring attention. Immediate action on the identified improvement areas will significantly enhance store performance and customer satisfaction.</p>
+            </div>
+        </div>
+
+        <!-- Detailed Points -->
+        <div class="section">
+            <h2 class="section-title">Detailed Analysis</h2>
+
+            <!-- Point 1 -->
+            <div class="detail-point">
+                <div class="point-header">
+                    <div class="point-number">1</div>
+                    <div class="point-title">Facade</div>
+                </div>
+<div class="image-compare-container">
+                    <img class="image-compare-before" src="1.jpeg" alt="Before Wall Bay">
+                    <img class="image-compare-after" src="1a.jpeg" alt="After Wall Bay">
+                    <div class="image-compare-slider"></div>
+                </div>
+                <div class="point-feedback">
+                    <strong>Observation:</strong> The facade looks good, welcoming, good parking space, the flagpole signage is also good.
+                    <br><br>
+                    <strong>Recommendation:</strong> The lighting of the store which looks to be at 3500 kelvin is premiumness but if it can be increased to 5500 kelvin it would make the store look more inviting from the outside. 
+                </div>
+            </div>
+
+            <!-- Point 2 -->
+            <div class="detail-point">
+                <div class="point-header">
+                    <div class="point-number">2</div>
+                    <div class="point-title">Entrance</div>
+                </div>
+                <div class="point-photo"><img src="14.jpeg" alt="Small Entrance"></div>
+
+                <div class="point-feedback">
+                    <strong>Observation:</strong> The Entrance is small, cramped and doesn't give a grand feeling. 
+                    <br><br>
+                    <strong>Recommendation:</strong> Pay 0 for Lens on the glass is good but it should be somewhere inside, this has chance of missing out and the visual looks really old which hasn't been changed for a very long time.
+                </div>
+
+            </div>
+
+            <!-- Point 3 -->
+            <div class="detail-point">
+                <div class="point-header">
+                    <div class="point-number">3</div>
+                    <div class="point-title">Cash Counter</div>
+                </div>
+                <div class="image-compare-container">
+                    <img class="image-compare-before" src="16.jpeg" alt="Before Wall Bay">
+                    <img class="image-compare-after" src="16after.jpeg" alt="After Wall Bay">
+                    <div class="image-compare-slider"></div>
+                </div>
+                <div class="point-feedback">
+                    <strong>Observation:</strong> Cash counter looks empty .
+                    <br><br>
+                    <strong>Recommendation:</strong> there can be brand logo at the cashcounter to give a feeling of completeness
+                </div>
+            </div>
+
+            <!-- Point 4 -->
+            <div class="detail-point">
+                <div class="point-header">
+                    <div class="point-number">4</div>
+                    <div class="point-title">Campaign Glass Vinyl Backside</div>
+                </div>
+                <div class="point-photo"><img src="17.jpeg" alt="Small Entrance"></div>
+                <div class="point-feedback">
+                    <strong>Observation:</strong> a Major real estate is being wasted at the back of the campaign glass vinyl which can be used for branding.
+                    <br><br>
+                    <strong>Recommendation:</strong> same campaign visual at the back without the clear vinyl part can be used to increase campaign awareness.
+                </div>
+            </div>
+
+            <!-- Point 5 -->
+            <div class="detail-point">
+                <div class="point-header">
+                    <div class="point-number">5</div>
+                    <div class="point-title">Focal to break the seriousness</div>
+                </div>
+                <div class="image-compare-container">
+                    <img class="image-compare-before" src="30.jpeg" alt="Before Wall Bay">
+                    <img class="image-compare-after" src="30after.jpeg" alt="After Wall Bay">
+                    <div class="image-compare-slider"></div>
+                </div>
+                <div class="point-feedback">
+                    <strong>Observation:</strong> The display is looking serious and formal which is good for the brand but a focal point to break the seriousness is missing.
+                    <br><br>
+                    <strong>Recommendation:</strong> Key visuals at the focal area are missing which can break the story telling for the store also the top area can be used for brand legacy.
+                </div>
+            </div>
+
+            <!-- Point 6 -->
+            <div class="detail-point">
+                <div class="point-header">
+                    <div class="point-number">6</div>
+                    <div class="point-title">Other feedbacks</div>
+                </div>
+                <div class="point-photo"><img src="25.jpeg" alt="Powered Sunglasses"></div>
+                <div class="point-feedback">
+                    <strong>Notes on Powered Sunglasses section:</strong> Covered in detail on VM implementation for this section.
+                </div>
+            </div>
+        </div>
+
+                <!-- Photo Gallery Section (Moved to last) -->
+        <div class="section">
+            <h2 class="section-title">Photo Collection</h2>
+            <div class="photo-gallery" id="photoGallery">
+                <!-- Photos will be generated here -->
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer-bottom">
+            <p>specsmakers.vmsd.in</p>
+        </div>
+    </div>
+
+    <!-- Photo Modal -->
+    <div class="modal" id="photoModal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-image" id="modalImage"></div>
+            <div class="modal-nav">
+                <button>← Previous</button>
+                <span id="photoCounter" style="color: #aaa; align-self: center;"></span>
+                <button>Next →</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

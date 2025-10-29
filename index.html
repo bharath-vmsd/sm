@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specsmakers Storefront</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="hero-section"></div>
+    <div id="drag-hint">
+        <p>Drag to Rotate</p>
+        <!-- Lottie animation could go here if a player is integrated -->
+        <div class="arrow"></div>
+    </div>
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+    <script type="module" src="main.js"></script>
+
+    
+
+
+    <!-- Cards Section -->
+    <section class="cards-section">
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-image"><img src="Assesment/mudichur/1.jpeg" alt="Store Audit Report" /></div>
+                <div class="card-content">
+                    <h3>Store Visit Report</h3>
+                    <a href="./Assesment/" class="card-button">View Report</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image"><img src="Assesment/kv/astralis.webp" alt="Entrance Activation" /></div>
+                <div class="card-content">
+                    <h3>Entrance Activation</h3>
+                    <a href="#" class="card-button">Concept Proposal</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image"><img src="Assesment/kv/streak.webp" alt="Sunglasses with Power" /></div>
+                <div class="card-content">
+                    <h3>Powered Sunglasses Section</h3>
+                    <a href="#" class="card-button">Explore Ideas</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Carousel -->
+    <div class="carousel">
+        <div class="carousel-container" id="carouselContainer">
+            <div class="carousel-slide" style="background-image: url('Assesment/adayar/1.jpeg');">
+                <h2>Adayar</h2>
+                <p>Old Format Store</p>
+                <a href="./Assesment/adayar/" class="cta-button">Store Report</a>
+            </div>
+            <div class="carousel-slide" style="background-image: url('Assesment/adayar2/1.jpeg');">
+                <h2>Adayar 2</h2>
+                <p>Old Format Store</p>
+                <a href="./Assesment/adayar2/" class="cta-button">Store Report</a>
+            </div>
+            <div class="carousel-slide" style="background-image: url('Assesment/besant-nagar/01 facade1.jpeg');">
+                <h2>Besant Nagar</h2>
+                <p>Renovated 2.0</p>
+                <a href="./Assesment/besant-nagar/" class="cta-button">Store Report</a>
+            </div>
+            <div class="carousel-slide" style="background-image: url('Assesment/mudichur/1.jpeg');">
+                <h2>Mudichur</h2>
+                <p>Renovated 2.0</p>
+                <a href="./Assesment/mudichur/" class="cta-button">Store Report</a>
+            </div>
+            <div class="carousel-slide" style="background-image: url('Assesment/manivakkam/2.jpeg');">
+                <h2>Manivaakam</h2>
+                <p>2.0 New Format</p>
+                <a href="./Assesment/manivakkam/" class="cta-button">Store Report</a>
+            </div>
+        </div>
+        <button class="carousel-arrow prev">‹</button>
+        <button class="carousel-arrow next">›</button>
+        <div class="carousel-nav" id="carouselNav"></div>
+    </div>
+
+    
+
+    
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-bottom">
+            <p>specsmakers.vmsd.in</p>
+        </div>
+    </footer>
+
+    <script src="Assesment/script.js"></script>
+</body>
+</html>

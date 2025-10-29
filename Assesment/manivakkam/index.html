@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Visit Report</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Manivakkam Store Visit Report</h1>
+            <p>Comprehensive Store Inspection & Analysis</p>
+            <div class="date">Date: <span id="reportDate">28th October 2025</span></div>
+        </div>
+
+
+
+        <!-- Summary Section -->
+        <div class="section">
+            <h2 class="section-title">Report Summary</h2>
+            <div class="summary-content">
+                <p><strong>Store Overview:</strong> The store inspection was conducted to assess overall operations, visual merchandising, customer experience, and compliance with brand standards.</p>
+                <p><strong>Key Observations:</strong> The store demonstrates strong potential with several areas performing well.</p>
+            </div>
+        </div>
+
+
+
+        <!-- Detailed Points -->
+        <div class="section">
+            <h2 class="section-title">Detailed Analysis</h2>
+
+            <!-- Point 1 -->
+            <div class="detail-point">
+                <div class="point-header">
+                    <div class="point-number">1</div>
+                    <div class="point-title">Window Display & Entrance</div>
+                </div>
+                <div class="point-photo"><img src="2.jpeg" alt="Window Display & Entrance"></div>
+                <div class="point-feedback">
+                    <strong>Observation:</strong> The window display requires updating to reflect current seasonal collections. The entrance area shows good lighting but could benefit from clearer brand messaging.
+                    <br><br>
+                    <strong>Recommendation:</strong> Refresh window displays bi-weekly with featured products. Add prominent brand elements at eye level. Consider adding a welcome mat and ensuring entrance glass is spotless.
+                </div>
+            </div>
+
+            <!-- Point 2 -->
+            <div class="detail-point">
+                <div class="point-header">
+                    <div class="point-number">2</div>
+                    <div class="point-title">Product Display & Merchandising</div>
+                </div>
+                <div class="image-compare-container">
+                    <img class="image-compare-before" src="3.jpeg" alt="Before Product Display">
+                    <img class="image-compare-after" src="10.jpeg" alt="After Product Display">
+                    <div class="image-compare-slider"></div>
+                </div>
+                <div class="point-feedback">
+                    <strong>Observation:</strong> Product displays are functional but lack creative presentation. Some high-value items are positioned in low-traffic areas. Shelving appears cluttered in certain sections.
+                    <br><br>
+                    <strong>Recommendation:</strong> Reorganize displays using the pyramid principle with hero products at eye level. Create themed displays to tell product stories. Implement the "less is more" approach for premium items.
+                </div>
+            </div>
+
+            <!-- Point 3 -->
+            <div class="detail-point">
+                <div class="point-header">
+                    <div class="point-number">3</div>
+                    <div class="point-title">Signage & Communication</div>
+                </div>
+                <div class="image-compare-container">
+                    <img class="image-compare-before" src="11.jpeg" alt="Before Signage & Communication">
+                    <img class="image-compare-after" src="12.jpeg" alt="After Signage & Communication">
+                    <div class="image-compare-slider"></div>
+                </div>
+                <div class="point-feedback">
+                    <strong>Observation:</strong> Pricing labels are inconsistent in format and placement. Promotional signage is minimal and not strategically placed. Wayfinding within the store needs improvement.
+                    <br><br>
+                    <strong>Recommendation:</strong> Standardize all price tags and labels. Create clear category signage. Add promotional standees at key decision points. Ensure all text is legible from 6 feet away.
+                </div>
+            </div>
+
+            <!-- Point 4 -->
+            <div class="detail-point">
+                <div class="point-header">
+                    <div class="point-number">4</div>
+                    <div class="point-title">Store Ambiance & Cleanliness</div>
+                </div>
+                <div class="image-compare-container">
+                    <img class="image-compare-before" src="13.jpeg" alt="Before Store Ambiance & Cleanliness">
+                    <img class="image-compare-after" src="16.jpeg" alt="After Store Ambiance & Cleanliness">
+                    <div class="image-compare-slider"></div>
+                </div>
+                <div class="point-feedback">
+                    <strong>Observation:</strong> Overall cleanliness is acceptable but requires attention to detail. Lighting is adequate but uneven in some areas. Background music volume is appropriate. Some corners show dust accumulation.
+                    <br><br>
+                    <strong>Recommendation:</strong> Implement a daily deep-cleaning checklist. Adjust lighting to create focal points. Ensure consistent temperature control. Add subtle air freshening. Polish all glass surfaces daily.
+                </div>
+            </div>
+
+            <!-- Point 5 -->
+            <div class="detail-point">
+                <div class="point-header">
+                    <div class="point-number">5</div>
+                    <div class="point-title">Customer Service & Checkout Area</div>
+                </div>
+                <div class="image-compare-container">
+                    <img class="image-compare-before" src="17.jpeg" alt="Before Customer Service & Checkout Area">
+                    <img class="image-compare-after" src="18.jpeg" alt="After Customer Service & Checkout Area">
+                    <div class="image-compare-slider"></div>
+                </div>
+                <div class="point-feedback">
+                    <strong>Observation:</strong> Staff members are courteous and helpful. Checkout counter is organized but could be more inviting. Impulse purchase items are not optimally placed. Queue management needs attention during peak hours.
+                    <br><br>
+                    <strong>Recommendation:</strong> Add comfortable seating near trial areas. Place high-margin impulse items near checkout. Implement a queue management system. Train staff on upselling techniques. Keep the counter clutter-free with only essential items visible.
+                </div>
+            </div>
+        </div>
+
+        <!-- Photo Gallery Section (Moved to last) -->
+        <div class="section">
+            <h2 class="section-title">Photo Collection</h2>
+            <div class="photo-gallery" id="photoGallery">
+                <!-- Photos will be generated here -->
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer-bottom">
+            <p>specsmakers.vmsd.in</p>
+        </div>
+    </div>
+
+    <!-- Photo Modal -->
+    <div class="modal" id="photoModal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-image" id="modalImage"></div>
+            <div class="modal-nav">
+                <button>← Previous</button>
+                <span id="photoCounter" style="color: #aaa; align-self: center;"></span>
+                <button>Next →</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

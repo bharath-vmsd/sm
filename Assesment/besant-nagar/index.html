@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Visit Report</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Besant Nagar Store Visit Report</h1>
+            <p>Comprehensive Store Inspection & Analysis</p>
+            <div class="date">Date: <span id="reportDate">28th October 2025</span></div>
+        </div>
+
+
+
+        <!-- Summary Section -->
+        <div class="section">
+            <h2 class="section-title">Report Summary</h2>
+            <div class="summary-content">
+                <p><strong>Store Overview:</strong> The store inspection was conducted to assess overall operations, visual merchandising, customer experience, and compliance with brand standards.</p>
+                <p><strong>Key Observations:</strong> The store demonstrates strong potential with several areas performing well. While my visit Audit was in progress and so dislay for a new store was not looked in detail.</p>
+                <p><strong>Overall Assessment:</strong> The visit revealed both strengths and areas requiring attention - though very less. Immediate action on the identified improvement areas will significantly enhance store performance and customer satisfaction.</p>
+            </div>
+        </div>
+
+        <!-- Detailed Points -->
+        <div class="section">
+            <h2 class="section-title">Detailed Analysis</h2>
+
+            <!-- Point 1 -->
+            <div class="detail-point">
+                <div class="point-header">
+                    <div class="point-number">1</div>
+                    <div class="point-title">Window Display & Entrance</div>
+                </div>
+                <div class="image-compare-container">
+                    <img class="image-compare-before" src="02 front.jpeg" alt="Before Product Display">
+                    <img class="image-compare-after" src="01 facade1.jpeg" alt="After Product Display">
+                    <div class="image-compare-slider"></div>
+                </div>
+                <div class="point-feedback">
+                    <strong>Observation:</strong> The current facade is a major uplift from the previous store design. the store is lit good but the ambient lighting could be imporved, the cash counter is very spacious. the audio and the fragrance dispenser adds to the overall experience. The entrance is inviting but could benefit from more dynamic elements to attract foot traffic.
+                    <br><br>
+                    <strong>Recommendation:</strong> LED wall if possible at the entrace or a display element which is animating to draw attention.
+                </div>
+            </div>
+
+            <!-- Point 2 -->
+            <div class="detail-point">
+                <div class="point-header">
+                    <div class="point-number">2</div>
+                    <div class="point-title">Focal Nesting Table</div>
+                </div>
+                <div class="image-compare-container">
+                    <img class="image-compare-before" src="./03 focal_front.jpeg" alt="Before Product Display">
+                    <img class="image-compare-after" src="./04 focal_back.jpeg" alt="After Product Display">
+                    <div class="image-compare-slider"></div>
+                </div>
+                <div class="point-feedback">
+                    <strong>Observation:</strong> Product displays at the focal are good the nesting table but can also be looked for more wrapping to give a completedness.
+                    <br><br>
+                    <strong>Recommendation:</strong> Full vinyl wraping as per the campaign's Key Visuals and brand elements.
+                </div>
+            </div>
+
+            <!-- Point 3 -->
+            <div class="detail-point">
+                <div class="point-header">
+                    <div class="point-number">3</div>
+                    <div class="point-title">Glass back</div>
+                </div>
+                <div class="image-compare-container">
+                    <img class="image-compare-before" src="./76.jpeg" alt="Before Signage & Communication">
+                    <img class="image-compare-after" src="./79.jpeg" alt="After Signage & Communication">
+                    <div class="image-compare-slider"></div>
+                </div>
+                <div class="point-feedback">
+                    <strong>Observation:</strong> This area is very empty.
+                    <br><br>
+                    <strong>Recommendation:</strong> there can be point of interests which are very visible when browsing, else becoming a dead area at the store.
+                </div>
+            </div>
+
+            <!-- Point 4 -->
+            <div class="detail-point">
+                <div class="point-header">
+                    <div class="point-number">4</div>
+                    <div class="point-title">Campaign wall</div>
+                </div>
+                <div class="image-compare-container">
+                    <img class="image-compare-before" src="./19.jpeg" alt="Before Store Ambiance & Cleanliness">
+                    <img class="image-compare-after" src="./19after.png" alt="After Store Ambiance & Cleanliness">
+                    <div class="image-compare-slider"></div>
+                </div>
+                <div class="point-feedback">
+                    <strong>Observation:</strong> The Campaign wall is an interesting addition but there seems to be a lack of communication, a signage can be added to give more room for the customer to understand the campaign better.
+                    <br><br>
+                    <strong>Recommendation:</strong> Light a curios optics kind of section header to create a curiousity corner and this changes as per campaign.
+                </div>
+            </div>
+
+            <!-- Point 5 -->
+            <div class="detail-point">
+                <div class="point-header">
+                    <div class="point-number">5</div>
+                    <div class="point-title">Ambient Light</div>
+                </div>
+                <div class="image-compare-container">
+                    <img class="image-compare-before" src="./67.jpeg" alt="Before Customer Service & Checkout Area">
+                    <img class="image-compare-after" src="./67after.jpeg" alt="After Customer Service & Checkout Area">
+                    <div class="image-compare-slider"></div>
+                </div>
+                <div class="point-feedback">
+                    <strong>Observation:</strong> The Ambient light now is better than before but can be further improvised.
+                    <br><br>
+                    <strong>Recommendation:</strong> It can be further improved with the use of downlight which spreads more across the Ambiance like in the image.
+                </div>
+            </div>
+        </div>
+
+        <!-- Photo Gallery Section (Moved to last) -->
+        <div class="section">
+            <h2 class="section-title">Photo Collection</h2>
+            <div class="photo-gallery" id="photoGallery">
+                <!-- Photos will be generated here -->
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer-bottom">
+            <p>specsmakers.vmsd.in</p>
+        </div>
+    </div>
+
+    <!-- Photo Modal -->
+    <div class="modal" id="photoModal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-image" id="modalImage"></div>
+            <div class="modal-nav">
+                <button>← Previous</button>
+                <span id="photoCounter" style="color: #aaa; align-self: center;"></span>
+                <button>Next →</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

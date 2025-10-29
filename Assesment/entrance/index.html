@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Concept</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Entrance Walkin Improvement Plan</h1>
+            <p>A new concept proposal for the Entrance of Specsmakers store</p>
+            <div class="date">Date: <span id="reportDate">29th October 2025</span></div>
+        </div>
+
+        <!-- Summary Section -->
+        <div class="section">
+            <h2 class="section-title">Summary</h2>
+            <div class="summary-content">
+                <p><strong>Concept Overview:</strong> This document outlines a new design concept that incorporates video and imagery to create a more engaging customer experience.</p>
+            </div>
+        </div>
+
+        <!-- Detailed Points -->
+        <div class="section">
+            <h2 class="section-title">Design Elements</h2>
+
+            <!-- Point 1: Video 1 -->
+            <div class="detail-point">
+                <div class="point-header">
+                    <div class="point-number">1</div>
+                    <div class="point-title">Introductory Video</div>
+                </div>
+                <div class="point-photo">
+                    <video width="100%" autoplay muted loop>
+                        <source src="led-at-glass.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="point-feedback">
+                    <strong>Observation:</strong> The first video introduces the new collection.
+                    <br><br>
+                    <strong>Recommendation:</strong> This video should be placed at the entrance to capture attention.
+                </div>
+            </div>
+
+            <!-- Point 2: Video 2 -->
+            <div class="detail-point">
+                <div class="point-header">
+                    <div class="point-number">2</div>
+                    <div class="point-title">Brand Story Video</div>
+                </div>
+                <div class="point-photo">
+                    <video width="100%" autoplay muted loop>
+                        <source src="spec_dislay.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="point-feedback">
+                    <strong>Observation:</strong> The second video tells the story of the brand.
+                    <br><br>
+                    <strong>Recommendation:</strong> This video can be used in a dedicated brand section of the store.
+                </div>
+            </div>
+
+            <!-- Point 6: Video 3 -->
+            <div class="detail-point">
+                <div class="point-header">
+                    <div class="point-number">6</div>
+                    <div class="point-title">Full Duration Video</div>
+                </div>
+                <div class="point-photo">
+                    <video id="full-duration-video" width="100%" autoplay muted loop>
+                        <source src="v3.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="point-feedback">
+                    <strong>Description:</strong> This video plays for its full duration and loops.
+                </div>
+            </div>
+
+            <!-- Point 3: Image 1 -->
+            <div class="detail-point">
+                <div class="point-header">
+                    <div class="point-number">3</div>
+                    <div class="point-title">Lifestyle Image 1</div>
+                </div>
+                <div class="point-photo"><img src="https://via.placeholder.com/800x600" alt="Placeholder Image 1"></div>
+                <div class="point-feedback">
+                    <strong>Description:</strong> A lifestyle shot showcasing the product in a real-world setting.
+                </div>
+            </div>
+
+            <!-- Point 4: Image 2 -->
+            <div class="detail-point">
+                <div class="point-header">
+                    <div class="point-number">4</div>
+                    <div class="point-title">Lifestyle Image 2</div>
+                </div>
+                <div class="point-photo"><img src="https://via.placeholder.com/800x600" alt="Placeholder Image 2"></div>
+                <div class="point-feedback">
+                    <strong>Description:</strong> Another lifestyle image to reinforce the brand message.
+                </div>
+            </div>
+            
+            <!-- Point 5: Image 3 -->
+            <div class="detail-point">
+                <div class="point-header">
+                    <div class="point-number">5</div>
+                    <div class="point-title">Product Close-up</div>
+                </div>
+                <div class="point-photo"><img src="https://via.placeholder.com/800x600" alt="Placeholder Image 3"></div>
+                <div class="point-feedback">
+                    <strong>Description:</strong> A close-up shot to highlight product details and quality.
+                </div>
+            </div>
+
+            
+        </div>
+
+        <!-- Photo Gallery Section -->
+        <div class="section">
+            <h2 class="section-title">Photo Collection</h2>
+            <div class="photo-gallery" id="photoGallery">
+                <!-- Photos will be generated here -->
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer-bottom">
+            <p>specsmakers.vmsd.in</p>
+        </div>
+    </div>
+
+    <!-- Photo Modal -->
+    <div class="modal" id="photoModal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-image" id="modalImage"></div>
+            <div class="modal-nav">
+                <button>← Previous</button>
+                <span id="photoCounter" style="color: #aaa; align-self: center;"></span>
+                <button>Next →</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

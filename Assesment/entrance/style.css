@@ -1,0 +1,341 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 2px solid #333;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .header p {
+            color: #aaa;
+            font-size: 1.1em;
+        }
+
+        .header .date {
+            margin-top: 15px;
+            font-size: 0.95em;
+            color: #888;
+        }
+
+        /* Photo Gallery Section */
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #444;
+        }
+
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjusted size */
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .photo-item {
+            aspect-ratio: 1;
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            cursor: pointer;
+            transition: transform 0.3s, border-color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3em;
+            color: #444;
+            overflow: hidden;
+        }
+
+        .photo-item:hover {
+            transform: scale(1.05);
+            border-color: #666;
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Modal for full-size photos */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            background-color: #1a1a1a;
+            padding: 20px;
+            position: relative;
+        }
+
+        .modal-image {
+            width: 100%;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #000;
+            color: #666;
+            font-size: 4em;
+        }
+
+        .modal-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        .modal-nav button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        .modal-nav button:hover {
+            background-color: #555;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 2em;
+            color: #fff;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        /* Summary Section */
+        .summary-content {
+            background-color: #0a0a0a;
+            padding: 25px;
+            border-left: 4px solid #fff;
+            margin-bottom: 20px;
+        }
+
+        .summary-content p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .summary-content h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .summary-content ul {
+            list-style: disc;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .summary-content li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        /* Improvements Section */
+        .improvements-list {
+            background-color: #0a0a0a;
+            padding: 25px;
+            border-left: 4px solid #888;
+        }
+
+        .improvements-list ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .improvements-list li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .improvements-list li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #888;
+        }
+
+        /* Detailed Points Section */
+        .detail-point {
+            background-color: #0a0a0a;
+            padding: 25px;
+            margin-bottom: 25px;
+            border: 1px solid #222;
+        }
+
+        .point-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #333;
+        }
+
+        .point-number {
+            background-color: #fff;
+            color: #000;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+            font-size: 1.2em;
+        }
+
+        .point-title {
+            font-size: 1.4em;
+            font-weight: 600;
+        }
+
+        .point-photo {
+            width: 100%;
+            max-width: 1000px; /* Adjusted size */
+            aspect-ratio: 4/3;
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #444;
+            font-size: 3em;
+            overflow: hidden;
+        }
+        
+        .point-photo img, .point-photo video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .point-feedback {
+            line-height: 1.8;
+            color: #ddd;
+        }
+
+        /* Image Compare Slider Styles */
+        .image-compare-container {
+            position: relative;
+            width: 100%;
+            max-width: 1000px; /* Adjusted size */
+            aspect-ratio: 4/3; /* Match point-photo aspect-ratio */
+            margin: 20px 0;
+            overflow: hidden;
+            border: 1px solid #333;
+            cursor: ew-resize;
+        }
+
+        .image-compare-container img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none; /* Prevent image dragging */
+        }
+
+        .image-compare-after {
+            clip-path: inset(0 0 0 50%); /* Initially show half of the after image */
+        }
+
+        .image-compare-slider {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: #fff;
+            transform: translateX(-50%);
+            cursor: ew-resize;
+            z-index: 1;
+        }
+
+        .image-compare-slider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            border: 2px solid #333;
+        }
+
+        /* Footer */
+        .footer-bottom {
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+            border-top: 2px solid #333;
+            color: #888;
+            font-size: 1.1em;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .section-title {
+                font-size: 1.4em;
+            }
+
+            .photo-gallery {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjusted size for smaller screens */
+            }
+        }
