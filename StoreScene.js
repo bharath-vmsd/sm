@@ -42,7 +42,6 @@ export class StoreScene {
 
         this.onWindowResize();
         window.addEventListener('resize', this.onWindowResize.bind(this), false);
-        this.setupDragHint();
 
         this.animate();
     }
@@ -84,23 +83,7 @@ export class StoreScene {
         this.renderer.setSize(width, height);
     }
 
-    setupDragHint() {
-        const dragHint = document.getElementById('drag-hint');
-        let hasInteracted = false;
-
-        const hideHint = () => {
-            if (!hasInteracted) {
-                dragHint.classList.add('hidden');
-                hasInteracted = true;
-                dragHint.addEventListener('transitionend', () => {
-                    dragHint.remove();
-                }, { once: true });
-            }
-        };
-
-        this.controls.addEventListener('start', hideHint);
-        this.renderer.domElement.addEventListener('touchstart', hideHint, { once: true });
-    }
+    
 
     animate() {
         requestAnimationFrame(this.animate.bind(this));

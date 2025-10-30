@@ -250,32 +250,7 @@ footer {
     height: 100% !important;
 }
 
-/* Drag Hint Styles */
-#drag-hint {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    font-size: 1rem;
-    text-align: center;
-    pointer-events: none; /* Allows interaction with elements behind it */
-    z-index: 10; /* Ensure it's above the canvas */
-}
 
-#drag-hint p {
-    margin-bottom: 5px;
-}
-
-.arrow {
-    width: 0;
-    height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-top: 8px solid white; /* White arrow pointing down */
-    margin: 0 auto;
-    animation: bounce 1s infinite alternate;
-}
 
 @keyframes bounce {
     from { transform: translateY(0); }
