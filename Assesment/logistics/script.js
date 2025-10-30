@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
         card.setAttribute('data-store-id', store.ID); // Add data attribute for lazy loading
 
         // Construct the map URL using the store's Location and address for embedding without an API key
-        const mapQuery = encodeURIComponent(`Specsmakers store, ${store.Location}, ${store.address}`);
+        const mapQuery = encodeURIComponent(`Specsmakers, ${store.Location}, ${store.address}`);
         const embedSrc = `https://maps.google.com/maps?q=${mapQuery}&output=embed`;
 
         let mapHtml = '';
@@ -134,6 +134,18 @@ document.addEventListener('DOMContentLoaded', () => {
         renderStores(filtered);
     }
 
+    // Debounce function
+    function debounce(func, delay) {
+        let timeout;
+        return function(...args) {
+            const context = this;
+            clearTimeout(timeout);
+            timeout = setTimeout(() => func.apply(context, args), delay);
+        };
+    }
+
+    const debouncedFilterStores = debounce(filterStores, 300); // 300ms delay
+
     // Initialize
     fetchCsvData('specsmakers-storedata.csv').then(data => {
         allStores = data;
@@ -144,5 +156,5 @@ document.addEventListener('DOMContentLoaded', () => {
         totalAreasSpan.textContent = uniqueAreas.size;
     });
 
-    searchInput.addEventListener('input', filterStores);
+    searchInput.addEventListener('input', debouncedFilterStores);
 });

@@ -383,3 +383,47 @@ nav {
 .nav-links a:hover {
     color: #e74c3c;
 }
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #ffffff;
+    margin: 4px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        background: #070707;
+        width: 100%;
+        flex-direction: column;
+        padding: 1rem 0;
+        display: none; /* Hidden by default */
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .nav-links.nav-active {
+        display: flex;
+        max-height: 200px; /* Adjust based on content */
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}

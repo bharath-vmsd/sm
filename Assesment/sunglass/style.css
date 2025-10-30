@@ -384,24 +384,69 @@ nav {
     color: #e74c3c;
 }
 
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #ffffff;
+    margin: 4px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        background: #070707;
+        width: 100%;
+        flex-direction: column;
+        padding: 1rem 0;
+        display: none; /* Hidden by default */
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .nav-links.nav-active {
+        display: flex;
+        max-height: 200px; /* Adjust based on content */
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
 /* Image Compare Slider Styles */
 .image-compare-container {
     position: relative;
     width: 100%;
-    max-width: 1000px; /* Doubled size */
-    aspect-ratio: 4/3; /* Match point-photo aspect-ratio */
+    max-width: 1000px;
     margin: 20px 0;
     overflow: hidden;
     border: 1px solid #333;
     cursor: ew-resize;
+    height: 600px; /* Set a fixed height or adjust as needed */
 }
 
 .image-compare-container img {
     position: absolute;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    pointer-events: none; /* Prevent image dragging */
+    height: 111.11%; /* To crop 10% from bottom (100 / 90 * 100) */
+    object-fit: contain;
+    object-position: top;
+    pointer-events: none;
 }
 
 .image-compare-after {

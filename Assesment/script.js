@@ -34,9 +34,20 @@ let currentSlide = 0;
         }
 
         // Auto-advance carousel
-        setInterval(() => {
+        let autoSlide = setInterval(() => {
             changeSlide(1);
         }, 5000);
+
+        const carousel = document.querySelector('.carousel');
+        carousel.addEventListener('mouseenter', () => {
+            clearInterval(autoSlide);
+        });
+
+        carousel.addEventListener('mouseleave', () => {
+            autoSlide = setInterval(() => {
+                changeSlide(1);
+            }, 5000);
+        });
 
         // Add event listeners for arrow buttons
         document.querySelector('.carousel-arrow.prev').addEventListener('click', () => changeSlide(-1));
