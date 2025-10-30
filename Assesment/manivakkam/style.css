@@ -56,7 +56,7 @@
 
         .photo-gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Adjusted size */
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjusted size */
             gap: 15px;
             margin-bottom: 20px;
         }
@@ -336,6 +336,6 @@
             }
 
             .photo-gallery {
-                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjusted size for smaller screens */
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjusted size for smaller screens */
             }
         }
