@@ -1,7 +1,6 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { RectAreaLightUniformsLib } from './jsm/lights/RectAreaLightUniformsLib.js';
-import TWEEN from '../jsm/libs/tween.esm.js';
 
 export class StoreScene {
     constructor(containerId) {
@@ -17,6 +16,7 @@ export class StoreScene {
         this.camera = new THREE.PerspectiveCamera(75, this.container.clientWidth / this.container.clientHeight, 0.1, 1000);
         this.renderer = new THREE.WebGLRenderer({ antialias: true });
         this.controls = null;
+        this.isRotating = false;
         this.init();
     }
 
@@ -87,22 +87,15 @@ export class StoreScene {
     }
 
     rotateWorld() {
-        const currentRotation = { y: this.worldGroup.rotation.y };
-        const targetRotation = { y: this.worldGroup.rotation.y + Math.PI / 2 }; // Rotate by 90 degrees
-
-        new TWEEN.Tween(currentRotation)
-            .to(targetRotation, 1000) // Animate over 1000 milliseconds (1 second)
-            .easing(TWEEN.Easing.Quadratic.Out)
-            .onUpdate(() => {
-                this.worldGroup.rotation.y = currentRotation.y;
-            })
-            .start();
+        this.isRotating = !this.isRotating;
     }
 
     animate() {
         requestAnimationFrame(this.animate.bind(this));
+        if (this.isRotating) {
+            this.worldGroup.rotation.y -= 0.015;
+        }
         this.controls.update();
-        TWEEN.update(); // Update TWEEN animations
         this.renderer.render(this.scene, this.camera);
     }
 
